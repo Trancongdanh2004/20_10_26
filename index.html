@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Chúc Mừng 20/10 nha Yến Nhi | Dành tặng cô Em Gái bé nhỏ cute dễ thương</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description"
+    content="Trang web thiệp chúc mừng Ngày Phụ Nữ Việt Nam 20/10 dành riêng cho em gái Yến Nhi, với thiệp chúc mừng tương tác, tâm thư yêu thương và chiếc hộp quà bất ngờ.">
+  <meta name="keywords" content="20/10, Yến Nhi, chúc mừng 20/10 em gái, thiệp 20/10, hộp quà bí mật">
+  <meta name="author" content="Anh trai gửi tặng Yến Nhi">
+  <meta property="og:title" content="Chúc Mừng 20/10 nha Yến Nhi | Dành tặng cô Em Gái bé nhỏ cute dễ thương">
+  <meta property="og:description"
+    content="Gửi trọn yêu thương, nụ cười và những điều tuyệt vời nhất đến em gái Yến Nhi nhân ngày 20/10.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/effects.css">
+</head>
+
+<body>
+  <!-- Background Audio (Hóa Ra... mp3) -->
+  <audio id="bg-music" preload="auto" loop playsinline>
+    <source src="audio/hoa-ra.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+  <!-- Fullscreen Interactive Canvas Backgrounds -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Mobile/Desktop Audio Play Prompt (Autoplay fallback) -->
+  <div class="audio-prompt-pill" id="audio-prompt-pill" role="alert">
+    <div class="prompt-icon">🎵</div>
+    <div class="prompt-text">
+      <strong>Bật nhạc nền</strong>
+      <small>Bài hát "Hóa Ra..." tặng em gái</small>
+    </div>
+    <button type="button" class="btn-prompt-action" id="btn-prompt-play" aria-label="Phát nhạc ngay">
+      ▶ Bật ngay
+    </button>
+  </div>
+
+  <!-- Sticky Translucent Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="scroll-progress" id="scroll-progress-bar" aria-hidden="true"></div>
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Trang chủ 20/10 cho Yến Nhi">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#ff4d8d" stroke="none">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        <span>Yến Nhi</span>
+        <span class="brand-badge">20/10</span>
+      </a>
+
+      <nav aria-label="Menu chính">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+          <li><a href="#card-sec" class="nav-link">Thiệp 20/10</a></li>
+          <li><a href="#giftbox-sec" class="nav-link">Hộp quà bí mật</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Audio Player Button (Hóa Ra... mp3) -->
+        <button type="button" class="btn-romantic-music" id="btn-romantic-music" title="Bật/Tắt bài hát Hóa Ra...">
+          <span class="music-note-icon">🎵</span>
+          <span id="music-btn-text">Bật Nhạc</span>
+        </button>
+
+        <a href="#card-sec" class="btn btn-primary nav-view-card-btn" style="padding: 8px 18px; font-size: 0.86rem;">
+          <span>Xem Thiệp</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Mở danh mục menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+
+    <!-- ====================================================================
+         1. HERO SECTION
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-floating-item floating-flower-1" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M50 85 C20 55 10 35 25 20 C40 5 50 25 50 25 C50 25 60 5 75 20 C90 35 80 55 50 85 Z" fill="#ff4d79"
+            opacity="0.75" />
+        </svg>
+      </div>
+      <div class="hero-floating-item floating-flower-2" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="14" fill="#ffcf6e" opacity="0.6" />
+          <path d="M50 15 C45 35 35 45 15 50 C35 55 45 65 50 85 C55 65 65 55 85 50 C65 45 55 35 50 15 Z" fill="#ff75a0"
+            opacity="0.65" />
+        </svg>
+      </div>
+      <div class="hero-floating-item floating-flower-3" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M50 80 C25 55 15 40 28 25 C42 12 50 28 50 28 C50 28 58 12 72 25 C85 40 75 55 50 80 Z" fill="#ff9ebb"
+            opacity="0.7" />
+        </svg>
+      </div>
+      <div class="hero-floating-item floating-flower-4" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="18" fill="#ffd6e0" opacity="0.7" />
+          <circle cx="50" cy="50" r="8" fill="#e62e5c" opacity="0.8" />
+        </svg>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-badge-wrap">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>🌸 Quà 20/10 Dành Cho Yến Nhi</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title" id="hero-main-title">
+          Gửi em gái bé nhỏ, Yến Nhi
+        </h1>
+
+        <p class="hero-subtitle">
+          Chúc em gái Yến Nhi ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp rạng rỡ, học tập & công việc thuận lợi. Anh
+          trai luôn ở đây sẵn sàng bảo vệ và che chở cho em!
+        </p>
+
+        <div class="hero-actions">
+          <a href="#card-sec" class="btn btn-primary btn-glow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            <span>Mở Thiệp 20/10 Cho Em</span>
+          </a>
+
+          <a href="#giftbox-sec" class="btn btn-secondary">
+            <span>Hộp Quà Bất Ngờ 🎁</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-preview">
+          <div class="hero-stat-item">
+            <span class="hero-stat-num">100%</span>
+            <span class="hero-stat-label">Tự hào về em gái</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-num">24/7</span>
+            <span class="hero-stat-label">Sẵn sàng bảo kê & che chở</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-num">Vô cực</span>
+            <span class="hero-stat-label">Tình thương của anh trai</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. COUNTDOWN / TODAY BANNER
+         ==================================================================== -->
+    <div class="event-banner-wrap">
+      <div class="container" id="event-banner-content">
+        <!-- Rendered dynamically by js/main.js based on current date -->
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         3. GREETING CARD SECTION (Thiệp Chúc Mừng Dành Riêng Cho Em Gái Hoàng Yến Nhi)
+         ==================================================================== -->
+    <section class="section-wrap generator-section" id="card-sec">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-badge">Gửi Lời Yêu Thương</span>
+          <h2 class="section-title">Thiệp Chúc Mừng 20/10 Tặng Em Gái Yến Nhi 🌸</h2>
+          <p class="section-subtitle">
+            Tấm thiệp trang nhã được tạo riêng tặng em gái Hoàng Yến Nhi với những lời chúc chân thành, yêu thương nhất
+            từ người anh trai.
+          </p>
+        </div>
+
+        <div class="generator-layout">
+          <!-- Left: Controls Form -->
+          <div class="generator-form-card reveal-left">
+            <div class="form-group">
+              <label for="card-recipient" class="form-label">Tên người nhận lời chúc:</label>
+              <input type="text" id="card-recipient" class="form-input" value="Yến Nhi" readonly
+                style="font-weight: 600; color: #e62e5c; background: #fff0f5;">
+            </div>
+
+            <div class="form-group">
+              <label for="card-sender" class="form-label">Thương chúc từ:</label>
+              <input type="text" id="card-sender" class="form-input" value="Công Danh"
+                placeholder="Tên Công Danh  (Ví dụ: Công Danh...)" maxlength="40">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Chọn phong cách màu sắc thiệp:</label>
+              <div class="theme-selectors" id="theme-selectors">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-generate btn-glow" id="btn-generate-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+              <span>Bắn Pháo Hoa Thiệp Mừng</span>
+            </button>
+          </div>
+
+          <!-- Right: Live Greeting Card Preview -->
+          <div class="generator-preview-wrap reveal-right">
+            <div class="greeting-card-preview card-theme-ruby" id="greeting-card-preview">
+              <div class="card-inner-frame">
+                <div class="card-header-badge">
+                  <span class="card-badge-pill" id="card-display-badge">Dành tặng cho Yến Nhi 🌸</span>
+                </div>
+
+                <h3 class="card-recipient-title font-display">
+                  Gửi tặng: <span id="card-display-recipient">Yến Nhi</span>
+                </h3>
+
+                <div class="card-wish-box">
+                  <p class="card-wish-text" id="card-display-text">
+                    <!-- Typewriter dynamic insertion -->
+                  </p>
+                </div>
+
+                <div class="card-sender-sign">
+                  Thương chúc từ: <span id="card-display-sender">Công Danh</span> ❤️
+                </div>
+              </div>
+
+              <!-- Action Bar (Optimized as a neat responsive grid on mobile) -->
+              <div class="card-actions-bar">
+                <button type="button" class="btn-card-action" id="btn-reroll-wish"
+                  title="Đổi lời chúc ngẫu nhiên khác cho Nhi">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+                  </svg>
+                  <span>Lời chúc khác</span>
+                </button>
+
+                <button type="button" class="btn-card-action" id="btn-copy-wish"
+                  title="Sao chép lời chúc vào khay nhớ tạm">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                  <span>Sao chép</span>
+                </button>
+
+                <button type="button" class="btn-card-action btn-card-download" id="btn-download-card"
+                  title="Tải thiệp định dạng PNG chất lượng cao">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                  </svg>
+                  <span>Tải ảnh PNG</span>
+                </button>
+
+                <button type="button" class="btn-card-action" id="btn-open-letter-from-card"
+                  style="border-color: #ff4d8d; color: #e62e5c;" title="Đọc bức tâm thư anh trai viết riêng cho Nhi">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  <span>Đọc tâm thư</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animated Love Letter Modal -->
+    <div class="loveletter-modal-backdrop" id="loveletter-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="loveletter-modal-dialog">
+        <div class="modal-letter-sheet">
+          <button type="button" class="btn-close-modal" id="btn-close-loveletter" aria-label="Đóng thư">✕</button>
+          <div class="modal-stamp">
+            <span>20/10</span>
+            <small>FAMILY</small>
+          </div>
+          <h3 class="modal-letter-title font-display" id="modal-letter-title">Bức thư tâm tình gửi cho Hoàng Yến Nhi
+          </h3>
+          <div class="modal-letter-body" id="modal-letter-body">
+            <!-- Typewriter text inserted here -->
+          </div>
+          <div class="modal-letter-footer font-script">
+            Thương chúc từ: <span class="lovecard-sender-name">Anh trai của em</span> ❤️
+          </div>
+          <div class="modal-controls">
+            <button type="button" class="btn btn-secondary" id="btn-next-letter">
+              <span>Đọc bức thư khác</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         4. RANDOM GIFT BOX SECTION (Chiếc Hộp Quà 20/10 Bí Mật Tặng Em Gái Yến Nhi)
+         ==================================================================== -->
+    <section class="section-wrap giftbox-section" id="giftbox-sec">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-badge">Bất Ngờ Dành Riêng Cho YẾN NHI</span>
+          <h2 class="section-title">Chiếc Hộp Quà 20/10 Bí Mật 🎁</h2>
+          <p class="section-subtitle">
+            Chạm vào một trong các hộp quà để mở những voucher đặc quyền, lời hứa ngọt ngào và các mini-game đáng yêu
+            anh trai dành riêng cho Yến Nhi!
+          </p>
+        </div>
+
+        <div id="giftbox-section-content">
+          <!-- Rendered dynamically by js/giftbox.js with weighted random, voucher card and collection drawer -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. CLOSING CELEBRATION
+         ==================================================================== -->
+    <section class="closing-section" id="closing">
+      <div class="container">
+        <div class="closing-card reveal-scale">
+          <span class="section-badge">Tình Thân Bền Chặt</span>
+          <h2 class="closing-title">Chúc Em Gái Yến Nhi 20/10 Rực Rỡ! 🌸</h2>
+          <p class="closing-desc">
+            Cảm ơn Yến Nhi vì đã luôn là cô em gái đáng yêu, đem lại nhiều tiếng cười cho cả nhà. Chúc em mãi luôn rạng
+            rỡ, bình an và luôn biết rằng phía sau em luôn có anh trai che chở, ủng hộ trên mọi bước đường.
+          </p>
+          <button type="button" class="btn btn-primary btn-glow" id="btn-celebrate-shower"
+            style="padding: 16px 36px; font-size: 1.1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            <span>Bắn Tim & Pháo Hoa Chúc Mừng Nhi</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span>🌸 20/10 Yêu Thương Dành Tặng Em Gái Yến Nhi</span>
+        </div>
+        <a href="#hero" class="footer-back-top" aria-label="Cuộn về đầu trang">
+          <span>Lên đầu trang</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p>Thương chúc em gái nhỏ Yến Nhi luôn vui vẻ, học giỏi và hạnh phúc mỗi ngày.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts in Correct Dependency Order for file:// and local server compatibility -->
+  <script src="js/data.js"></script>
+  <script src="js/petals.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/giftbox.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+/**
+ * Vietnamese Women's Day (20/10) - Effects & Animations Stylesheet
+ * Keyframes, canvas layering, romantic card themes,
+ * blooming flowers, and reduced-motion support.
+ */
+
+/* ==========================================================================
+   Full-screen Canvas Layers
+   ========================================================================== */
+#petals-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2; /* Sits behind content, above body background */
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998; /* Sits on top of content for celebratory explosions */
+}
+
+/* ==========================================================================
+   Scroll Reveal Animations
+   ========================================================================== */
+.reveal, .reveal-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s var(--ease-out-cubic), transform 0.8s var(--ease-out-cubic);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s var(--ease-out-cubic), transform 0.8s var(--ease-out-cubic);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s var(--ease-out-cubic), transform 0.8s var(--ease-out-cubic);
+  will-change: opacity, transform;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s var(--ease-out-cubic), transform 0.8s var(--ease-out-cubic);
+  will-change: opacity, transform;
+}
+
+.is-revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* ==========================================================================
+   Keyframe Animations
+   ========================================================================== */
+
+/* Hero Staggered Word Reveal */
+@keyframes hero-word-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gentle Floating Blobs & Flowers */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(4deg);
+  }
+}
+
+/* Pulsing Badge Dot */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 141, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 77, 141, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 141, 0);
+  }
+}
+
+/* Subtle Breathing Glow for CTA */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 8px 22px rgba(255, 77, 141, 0.35);
+  }
+  50% {
+    box-shadow: 0 12px 32px rgba(255, 77, 141, 0.65), 0 0 16px rgba(255, 207, 110, 0.4);
+  }
+}
+
+/* Typewriter Blinking Caret */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Card Generation Bounce */
+@keyframes card-burst {
+  0% {
+    transform: scale(0.96);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-burst-anim {
+  animation: card-burst 0.7s var(--ease-spring);
+}
+
+/* Flower Blooming Animation */
+.flower-card.is-blooming .flower-svg {
+  animation: flower-bloom-spin 1.8s var(--ease-spring);
+}
+
+@keyframes flower-bloom-spin {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  40% {
+    transform: scale(1.3) rotate(35deg);
+  }
+  70% {
+    transform: scale(1.15) rotate(15deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(15deg);
+  }
+}
+
+/* Cursor Sparkle Trail Particle */
+.cursor-sparkle {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: sparkle-pop 0.7s forwards ease-out;
+}
+
+@keyframes sparkle-pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1) rotate(180deg);
+  }
+}
+
+/* ==========================================================================
+   Romantic Card Themes (Interactive Generator Styles)
+   ========================================================================== */
+
+/* Theme: Ruby Love (Default) */
+.greeting-card-preview.card-theme-ruby {
+  background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
+  border-color: #e62e5c;
+}
+.greeting-card-preview.card-theme-ruby .card-inner-frame {
+  border-color: rgba(230, 46, 92, 0.45);
+}
+.greeting-card-preview.card-theme-ruby .card-badge-pill {
+  background: rgba(230, 46, 92, 0.12);
+  color: #e62e5c;
+}
+
+/* Theme: Sweet Pink Pastel */
+.greeting-card-preview.card-theme-pink-pastel {
+  background: linear-gradient(135deg, #ffffff 0%, #fff5f8 100%);
+  border-color: #ff75a0;
+}
+.greeting-card-preview.card-theme-pink-pastel .card-inner-frame {
+  border-color: rgba(255, 117, 160, 0.45);
+}
+.greeting-card-preview.card-theme-pink-pastel .card-badge-pill {
+  background: rgba(255, 117, 160, 0.15);
+  color: #c2185b;
+}
+
+/* Theme: Twilight Violet */
+.greeting-card-preview.card-theme-twilight {
+  background: linear-gradient(135deg, #ffffff 0%, #f6f2ff 100%);
+  border-color: #7952b3;
+}
+.greeting-card-preview.card-theme-twilight .card-inner-frame {
+  border-color: rgba(121, 82, 179, 0.45);
+}
+.greeting-card-preview.card-theme-twilight .card-badge-pill {
+  background: rgba(121, 82, 179, 0.12);
+  color: #7952b3;
+}
+
+/* Theme: Royal Gold */
+.greeting-card-preview.card-theme-gold-luxury {
+  background: linear-gradient(135deg, #ffffff 0%, #fffdf0 100%);
+  border-color: #d4af37;
+}
+.greeting-card-preview.card-theme-gold-luxury .card-inner-frame {
+  border-color: rgba(212, 175, 55, 0.6);
+}
+.greeting-card-preview.card-theme-gold-luxury .card-badge-pill {
+  background: rgba(212, 175, 55, 0.15);
+  color: #b8860b;
+}
+
+/* ==========================================================================
+   Accessibility: Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale,
+  .hero-word, .quality-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  #petals-canvas, #confetti-canvas, .cursor-sparkle {
+    display: none !important;
+  }
+
+  .floating-flower-1, .floating-flower-2, .floating-flower-3, .floating-flower-4 {
+    animation: none !important;
+  }
+}
